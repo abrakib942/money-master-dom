@@ -12,39 +12,39 @@
 </head>
 <body>
     <main>
-        <section class="">
-            <h1 class="text-center my-4 text-danger">Monthly Income Expenses</h1>
+        <section class="container">
+            <h1 class="text-center my-4 text-danger">Monthly Income Expenses and Deposits</h1>
             <div class="row d-flex align-items-center">
                 <!-- image -->
-                <div class="col-lg-6 col-sm-12">
+                <div class="col-lg-6 responsive">
                     <img src="hisab.jpg" alt="" class="m-4 p-4">
                 </div>
 
                 <!-- ................... -->
-                <div class="col-lg-6 col-sm-12 box-style">
+                <div class="col-lg-6 box-style">
 
                          <!-- income -->
                         <h4 class="m-4">Income</h4>
-                        <p class="fw-bold"> Income: <input type="text" name="" id=""></p>
+                        <p class="fw-bold"> Income: <input type="text" name="" id="income-input"></p>
 
                         <!-- expenses -->
                         <h4 class="m-4">Expenses</h4>
 
-                        <p class="fw-bold"> Food: <input type="text" name="" id=""></p>
-                        <p class="fw-bold"> Rent: <input type="text" name="" id=""></p>
-                        <p class="fw-bold"> Cloths: <input type="text" name="" id=""></p>
+                        <p class="fw-bold"> Food: <input type="text" name="" id="food-input"></p>
+                        <p class="fw-bold"> Rent: <input type="text" name="" id="rent-input"></p>
+                        <p class="fw-bold"> Cloths: <input type="text" name="" id="cloths-input"></p>
 
-                        <button class="btn btn-primary mb-3">Calculate</button>
+                        <button class="btn btn-primary mb-3" id="calc-btn">Calculate</button>
 
                         <!-- ........ -->
-                        <h5 class="my-2">Total Expenses: <span>5500</span> </h5>
-                        <h5 class="my-3">Balance: <span>4500</span> </h5>
+                        <h5 class="my-2">Total Expenses: <span id="total-expenses">5500</span> </h5>
+                        <h5 class="my-3">Balance: <span id="total-balance">4500</span> </h5>
 
                         <!-- save amount -->
-                        <p class="fw-bold my-2"> Save: <input type="text" name="" id=""> % <button class="btn btn-primary">Save</button></p>
-                        
-                        <h5 class="my-3">Saving Amount: <span>2000</span> </h5>
-                        <h5 class="my-3">Remaining Balance: <span>2500</span> </h5>
+                        <p class="fw-bold my-2 mt-4"> Save: <input type="text" name="" id="save-input"> % <button class="btn btn-primary" id="save-btn">Save</button></p>
+
+                        <h5 class="my-3">Saving Amount: <span id="save-amount">2000</span> </h5>
+                        <h5 class="my-3">Remaining Balance: <span id="remain-amount">2500</span> </h5>
 
                 </div>
             </div>
