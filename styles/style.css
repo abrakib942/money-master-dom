@@ -5,6 +5,13 @@
     text-align: center;
 }
 
+.error{
+    color: tomato;
+    font-size: small;
+    display: none;
+}
+
+/* responsive for mobile devices */
 @media(max-width: 576px) {
     .container h1{
         text-align: center;

@@ -25,24 +25,23 @@
 
                          <!-- income -->
                         <h4 class="m-4">Income</h4>
-                        <p class="fw-bold"> Income: <input type="text" name="" id="income-input"> <br>
-                            <span class="text-danger fst-italic d-none" id="income-error">❌ please input only positive number</span> </p>
-
+                        <p class="fw-bold"> Income: <input type="text" name="" id="income-input"></p>
+                        <p class="error" id="income-error">❌ please input only positive number</p>
                         <!-- expenses -->
                         <h4 class="m-4">Expenses</h4>
 
-                        <p class="fw-bold"> Food: <input type="text" name="" id="food-input"> <br>
-                             <span class="text-danger fst-italic d-none" id="food-error">❌ please input only positive number</span> </p>
-                        <p class="fw-bold"> Rent: <input type="text" name="" id="rent-input"> <br>
-                             <span class="text-danger fst-italic d-none" id="rent-error">❌ please input only positive number</span> </p>
-                        <p class="fw-bold"> Cloths: <input type="text" name="" id="cloths-input"> <br>
-                             <span class="text-danger fst-italic d-none" id="cloths-error">❌ please input only positive number</span> </p>
-
+                        <p class="fw-bold"> Food: <input type="text" name="" id="food-input"></p>
+                        <p class="error" id="food-error">❌ please input only positive number</p>
+                        <p class="fw-bold"> Rent: <input type="text" name="" id="rent-input"></p>
+                        <p class="error" id="rent-error">❌ please input only positive number</p>
+                        <p class="fw-bold"> Cloths: <input type="text" name="" id="cloths-input"></p>
+                        <p class="error" id="cloths-error">❌ please input only positive number</p>
                         <button class="btn btn-primary mb-3" id="calc-btn">Calculate</button>
 
                         <!-- ........ -->
                         <h5 class="my-2">Total Expenses: <span id="total-expenses">0</span> </h5>
                         <h5 class="my-3">Balance: <span id="total-balance">0</span> </h5>
+                        <p class="error fw-bold" id="balance-error"> Error: Your Income is less then Expenses. ইনকাম অনুযায়ী খরচ করুন।</p>
 
                         <!-- save amount -->
                         <p class="fw-bold my-2 mt-4"> Save: <input type="text" name="" id="save-input"> % <button class="btn btn-primary" id="save-btn">Save</button></p>
