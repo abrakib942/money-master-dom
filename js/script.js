@@ -10,13 +10,21 @@ document.getElementById('calc-btn').addEventListener('click', function() {
 
     totalExpenses.innerText = parseFloat(foodInput) + parseFloat(rentInput) + parseFloat(clothsInput);
 
-    totalBalance.innerText = parseFloat(incomeInput) - totalExpenses.innerText;
+    totalBalance.innerText = parseFloat(incomeInput) - parseFloat(totalExpenses.innerText);
     
 })
 
 document.getElementById('save-btn').addEventListener('click', function() {
     let saveInput = document.getElementById('save-input').value;
     let incomeInput = document.getElementById('income-input').value;
+    let totalBalance = document.getElementById('total-balance');
+
     let saveAmount = document.getElementById('save-amount');
-    
+    let remainAmount = document.getElementById('remain-amount');
+
+    let totalSave = incomeInput * saveInput/100;
+
+    saveAmount.innerText = totalSave;
+    remainAmount.innerText = totalBalance.innerText - saveAmount.innerText;
+
 })
