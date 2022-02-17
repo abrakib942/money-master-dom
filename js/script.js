@@ -4,6 +4,7 @@ document.getElementById('calc-btn').addEventListener('click', function() {
     
 })
 
+             /* function */
 function getBalance() {
     let incomeInput = document.getElementById('income-input').value;
     let foodInput = document.getElementById('food-input').value;
@@ -33,11 +34,17 @@ function getBalance() {
         totalExpenses.innerText = 0;
         totalBalance.innerText = 0;
     }
+    else{
+        incomeError.style.display = 'none';
+    }
     if(isNaN(foodInput) || foodInput < 0) {
         foodError.style.display = 'block';
 
         totalExpenses.innerText = 0;
         totalBalance.innerText = 0;
+    }
+    else{
+        foodError.style.display = 'none';
     }
     if(isNaN(rentInput) || rentInput < 0) {
         rentError.style.display = 'block';
@@ -45,19 +52,30 @@ function getBalance() {
         totalExpenses.innerText = 0;
         totalBalance.innerText = 0;
     }
+    else{
+        rentError.style.display = 'none';
+    }
     if(isNaN(clothsInput) || clothsInput < 0) {
         clothsError.style.display = 'block';
 
         totalExpenses.innerText = 0;
         totalBalance.innerText = 0;
     }
+    else{
+        clothsError.style.display = 'none';
+    }
 
     /* error handle balance */
-    // if(totalExp > incomeInput) {
-    //     balanceError.style.display = 'block';
-    // }
+    if(Number(totalExp) > incomeInput) {
+        balanceError.style.display = 'block';
+        totalBalance.innerText = 0;
+    }
+    else{
+        balanceError.style.display = 'none';
+    }
 }
 
+                        /* Bonus part */
 
 document.getElementById('save-btn').addEventListener('click', function() {
     let saveInput = document.getElementById('save-input').value;
@@ -71,5 +89,15 @@ document.getElementById('save-btn').addEventListener('click', function() {
 
     saveAmount.innerText = totalSave;
     remainAmount.innerText = totalBalance.innerText - saveAmount.innerText;
+
+    let saveError = document.getElementById('save-error');
+    if(Number(saveAmount.innerText) > Number(totalBalance.innerText)) {
+        saveError.style.display = 'block';
+        saveAmount.innerText = 0;
+        remainAmount.innerText = 0;
+    }
+    else{
+        saveError.style.display = 'none'; 
+    }
 
 })
