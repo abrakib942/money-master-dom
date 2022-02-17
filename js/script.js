@@ -1,7 +1,6 @@
 document.getElementById('calc-btn').addEventListener('click', function() {
 
-    getBalance()
-    
+    getBalance();   
 })
 
              /* function */
@@ -78,6 +77,12 @@ function getBalance() {
                         /* Bonus part */
 
 document.getElementById('save-btn').addEventListener('click', function() {
+    
+    saveAmount();
+})
+
+              /* function */
+function saveAmount() {
     let saveInput = document.getElementById('save-input').value;
     let incomeInput = document.getElementById('income-input').value;
     let totalBalance = document.getElementById('total-balance');
@@ -91,7 +96,9 @@ document.getElementById('save-btn').addEventListener('click', function() {
     remainAmount.innerText = totalBalance.innerText - saveAmount.innerText;
 
     let saveError = document.getElementById('save-error');
-    if(Number(saveAmount.innerText) > Number(totalBalance.innerText)) {
+    let inputError = document.getElementById('error-Input');
+
+    if(Number(saveAmount.innerText) > Number(totalBalance.innerText) || isNaN(saveInput)) {
         saveError.style.display = 'block';
         saveAmount.innerText = 0;
         remainAmount.innerText = 0;
@@ -99,5 +106,17 @@ document.getElementById('save-btn').addEventListener('click', function() {
     else{
         saveError.style.display = 'none'; 
     }
+    
+    if(isNaN(saveInput) || saveInput < 0) {
+        saveError.style.display = 'none';
+        inputError.style.display = 'block';
+        saveAmount.innerText = 0;
+        remainAmount.innerText = 0;
+    }
+    else{
+        inputError.style.display = 'none'; 
+    }
 
-})
+}
+
+                
